@@ -20,6 +20,11 @@ public class FirstWordsThenNumbersComparator implements Comparator<String> {
 
             return num1.compareTo(num2);
         } else {
+            if (o1.startsWith("-") && !o2.startsWith("-")) {
+                return 1;
+            } else if (!o1.startsWith("-") && o2.startsWith("-")) {
+                return -1;
+            }
             return o1.compareTo(o2);
         }
     }
