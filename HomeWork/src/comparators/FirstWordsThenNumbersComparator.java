@@ -4,6 +4,7 @@ import java.util.Comparator;
 
 public class FirstWordsThenNumbersComparator implements Comparator<String> {
     private final static String NUMBER_REGEX = "-?\\d+.?\\d*";
+    private final static String MINUS_SYMBOL = "-";
 
     @Override
     public int compare(String o1, String o2) {
@@ -20,9 +21,12 @@ public class FirstWordsThenNumbersComparator implements Comparator<String> {
 
             return num1.compareTo(num2);
         } else {
-            if (o1.startsWith("-") && !o2.startsWith("-")) {
+            boolean o1StartWithMinus = o1.startsWith(MINUS_SYMBOL);
+            boolean o2StartWithMinus = o2.startsWith(MINUS_SYMBOL);
+
+            if (o1StartWithMinus && !o2StartWithMinus) {
                 return 1;
-            } else if (!o1.startsWith("-") && o2.startsWith("-")) {
+            } else if (!o1StartWithMinus && o2StartWithMinus) {
                 return -1;
             }
             return o1.compareTo(o2);
