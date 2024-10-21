@@ -12,7 +12,7 @@ public class RobotPartsFactory {
     private static final int STARTED_PARTS_COUNT = 20;
 
     private final RobotParts[] allParts = RobotParts.values();
-    private final Random rnd = ThreadLocalRandom.current();
+    private final ThreadLocalRandom rnd = ThreadLocalRandom.current();
 
     private final List<RobotParts> dump = new ArrayList<>();
 

@@ -3,7 +3,6 @@ package home_work_1.robots_builder;
 import home_work_1.robots_builder.dto.RobotParts;
 
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Assistant {
@@ -11,7 +10,7 @@ public class Assistant {
     private final static int MAX_PARTS_COUNT = 4;
 
     private final Scientist scientist;
-    private final Random rnd = ThreadLocalRandom.current();
+    private final ThreadLocalRandom rnd = ThreadLocalRandom.current();
 
     public Assistant(Scientist scientist) {
         this.scientist = scientist;
