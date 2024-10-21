@@ -1,7 +1,7 @@
 package java_core.lesson_1;
 
-import java_core.lesson_1.comparators.FirstWordsThenNumbersComparator;
 import java_core.lesson_1.api.IFileHandler;
+import java_core.lesson_1.comparators.FirstWordsThenNumbersComparator;
 import java_core.lesson_1.utils.SortUtils;
 
 public class Main {
