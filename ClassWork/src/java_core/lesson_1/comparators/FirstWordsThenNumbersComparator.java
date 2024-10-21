@@ -1,4 +1,4 @@
-package comparators;
+package java_core.lesson_1.comparators;
 
 import java.util.Comparator;
 

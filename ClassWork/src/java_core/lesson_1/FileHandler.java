@@ -1,6 +1,7 @@
-package home_works.hw_1;
+package java_core.lesson_1;
 
-import api.IFileHandler;
+
+import java_core.lesson_1.api.IFileHandler;
 
 import java.io.*;
 
