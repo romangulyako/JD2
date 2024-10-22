@@ -14,6 +14,9 @@ public class RobotPartsFactoryJob implements Runnable{
         this.factory = factory;
     }
 
+    /**
+     * Метод симулирует работу фабрики по выбросу на свалку запчастей
+     */
     @Override
     public void run() {
         for (int i = 0; i < NIGHTS_COUNT; i++) {

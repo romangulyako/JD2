@@ -10,6 +10,11 @@ import java.util.Map;
 public class Scientist {
     private final Map<RobotParts,Integer> robotPartsForAssembly = new HashMap<>();
 
+    /**
+     * Метод для получения запчастей и добавления их в хранилище для последующей сборки
+     *
+     * @param parts список запчастей
+     */
     public void takeRobotParts(List<RobotParts> parts) {
         for (RobotParts part : parts) {
             Integer count = robotPartsForAssembly.get(part);
@@ -20,6 +25,11 @@ public class Scientist {
         }
     }
 
+    /**
+     * Метод собирает роботов из имеющихся запчастей
+     *
+     * @return количество роботов
+     */
     public int assembleRobots() {
         int mandatoryCountParts = RobotParts.values().length;
 

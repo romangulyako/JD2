@@ -16,11 +16,21 @@ public class Assistant {
         this.scientist = scientist;
     }
 
+    /**
+     * Метод собирает на свалке случайное количество запчастей
+     *
+     * @param factory фабрика, на свалке которой будут собираться запчасти
+     * @return список собранных запчастей
+     */
     public synchronized List<RobotParts> takeRobotPartsFromDump(RobotPartsFactory factory) {
         int takenPartsCount = rnd.nextInt(MIN_PARTS_COUNT,MAX_PARTS_COUNT);
         return factory.getParts(takenPartsCount);
     }
 
+    /**
+     * Метод передает запчасти ученому
+     * @param parts список передаваемых запчастей
+     */
     public void giveRobotPartsToScientist(List<RobotParts> parts) {
         scientist.takeRobotParts(parts);
     }

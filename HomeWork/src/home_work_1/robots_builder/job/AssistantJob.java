@@ -19,6 +19,9 @@ public class AssistantJob implements Runnable{
         this.assistant = assistant;
     }
 
+    /**
+     * Метод симулирует работу ассистента по сбору на свалке запчастей и передаче их ученому
+     */
     @Override
     public void run() {
         for (int i = 0; i < NIGHTS_COUNT; i++) {

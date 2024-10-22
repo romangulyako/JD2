@@ -20,6 +20,9 @@ public class RobotPartsFactory {
         throwStartedRobotParts();
     }
 
+    /**
+     * Метод симулирует выброс на свалку случайное количество запчастей
+     */
     public void throwRobotParts() {
         int partsCount = rnd.nextInt(MIN_PARTS_COUNT,MAX_PARTS_COUNT);
 
@@ -28,6 +31,14 @@ public class RobotPartsFactory {
         }
     }
 
+    /**
+     * Метод возвращает из свалки определенное количество запчастей и удаляет их из свалки
+     * Если на свалке запчастей меньше или они отсутствуют, возвращаются все имеющиеся
+     * там запчасти или ничего
+     *
+     * @param count количество запчастей, которое необходимо вернуть
+     * @return список запчастей
+     */
     public synchronized List<RobotParts> getParts(int count) {
         List<RobotParts> takenParts = new ArrayList<>();
 
@@ -48,12 +59,18 @@ public class RobotPartsFactory {
         return takenParts;
     }
 
+    /**
+     * Метод для начального заполнения свалки
+     */
     private void throwStartedRobotParts() {
         for (int i = 0; i < STARTED_PARTS_COUNT; i++) {
             addPartToDump();
         }
     }
 
+    /**
+     * Метод добавляет на свалку одну случайную запчасть
+     */
     private void addPartToDump() {
         RobotParts part = allParts[rnd.nextInt(allParts.length)];
         dump.add(part);
