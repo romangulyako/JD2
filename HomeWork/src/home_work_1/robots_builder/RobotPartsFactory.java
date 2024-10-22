@@ -2,7 +2,6 @@ package home_work_1.robots_builder;
 
 import home_work_1.robots_builder.dto.RobotParts;
 
-
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -10,10 +9,9 @@ public class RobotPartsFactory {
     private static final int MIN_PARTS_COUNT = 1;
     private static final int MAX_PARTS_COUNT = 4;
     private static final int STARTED_PARTS_COUNT = 20;
+    private static final RobotParts[] ALL_PARTS = RobotParts.values();
 
-    private final RobotParts[] allParts = RobotParts.values();
     private final ThreadLocalRandom rnd = ThreadLocalRandom.current();
-
     private final List<RobotParts> dump = new ArrayList<>();
 
     public RobotPartsFactory() {
@@ -42,17 +40,15 @@ public class RobotPartsFactory {
     public synchronized List<RobotParts> getParts(int count) {
         List<RobotParts> takenParts = new ArrayList<>();
 
-        if (!dump.isEmpty()) {
-            if (count >= dump.size()) {
-                takenParts.addAll(dump);
-                dump.clear();
-            } else {
-                for (int i = 0; i < count; i++) {
-                    int index = rnd.nextInt(dump.size());
-                    RobotParts part = dump.get(index);
-                    takenParts.add(part);
-                    dump.remove(part);
-                }
+        if (count >= dump.size()) {
+            takenParts.addAll(dump);
+            dump.clear();
+        } else {
+            for (int i = 0; i < count; i++) {
+                int index = rnd.nextInt(dump.size());
+                RobotParts part = dump.get(index);
+                takenParts.add(part);
+                dump.remove(index);
             }
         }
 
@@ -72,7 +68,7 @@ public class RobotPartsFactory {
      * Метод добавляет на свалку одну случайную запчасть
      */
     private void addPartToDump() {
-        RobotParts part = allParts[rnd.nextInt(allParts.length)];
+        RobotParts part = ALL_PARTS[rnd.nextInt(ALL_PARTS.length)];
         dump.add(part);
     }
 }

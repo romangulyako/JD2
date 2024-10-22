@@ -5,11 +5,13 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class Main {
+    public final static String METHOD_NAME = "printInfo";
+
     public static void main(String[] args) {
         try {
             Main main = new Main();
             Class<?> mainClass = main.getClass();
-            Method printInfoMethod = mainClass.getDeclaredMethod("printInfo", Class.class);
+            Method printInfoMethod = mainClass.getDeclaredMethod(METHOD_NAME, Class.class);
             String info = printInfoMethod.invoke(main,Man.class).toString();
             System.out.println(info);
         } catch (Exception e) {

@@ -2,13 +2,10 @@ package home_work_1.robots_builder;
 
 import home_work_1.robots_builder.dto.RobotParts;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Scientist {
-    private final Map<RobotParts,Integer> robotPartsForAssembly = new HashMap<>();
+    private final Map<RobotParts,Integer> partsForAssembly = new HashMap<>();
 
     /**
      * Метод для получения запчастей и добавления их в хранилище для последующей сборки
@@ -17,11 +14,8 @@ public class Scientist {
      */
     public void takeRobotParts(List<RobotParts> parts) {
         for (RobotParts part : parts) {
-            Integer count = robotPartsForAssembly.get(part);
-            if (count == null) {
-                count = 0;
-            }
-            robotPartsForAssembly.put(part, ++count);
+            Integer count = partsForAssembly.getOrDefault(part,0);
+            partsForAssembly.put(part,++count);
         }
     }
 
@@ -31,21 +25,15 @@ public class Scientist {
      * @return количество роботов
      */
     public int assembleRobots() {
-        int mandatoryCountParts = RobotParts.values().length;
-
-        if (robotPartsForAssembly.size() == mandatoryCountParts) {
-
-            List<Integer> values = new ArrayList<>(robotPartsForAssembly.values());
-
-            int count = values.get(0);
-
-            for (Integer value : values) {
-                if(value < count) {
-                    count = value;
-                }
+        int allPartsCount = RobotParts.values().length;
+        if (partsForAssembly.size() == allPartsCount) {
+            List<Integer> partsCount = new ArrayList<>(partsForAssembly.values());
+            int robotsCount = partsCount.get(0);
+            for (Integer partCount : partsCount) {
+                robotsCount = Math.min(robotsCount,partCount);
             }
 
-            return count;
+            return robotsCount;
         }
 
         return 0;

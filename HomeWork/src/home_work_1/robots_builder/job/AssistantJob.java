@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class AssistantJob implements Runnable{
-    private final static long INTERVAL_BETWEEN_DAYS = 100;
+    private final static long INTERVAL_BETWEEN_NIGHTS = 100;
     private final static int NIGHTS_COUNT = 100;
 
     private final RobotPartsFactory factory;
@@ -29,7 +29,7 @@ public class AssistantJob implements Runnable{
             assistant.giveRobotPartsToScientist(parts);
 
             try {
-                TimeUnit.MILLISECONDS.sleep(INTERVAL_BETWEEN_DAYS);
+                TimeUnit.MILLISECONDS.sleep(INTERVAL_BETWEEN_NIGHTS);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
