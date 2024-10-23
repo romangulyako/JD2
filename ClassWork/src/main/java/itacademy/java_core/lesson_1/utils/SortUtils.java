@@ -1,4 +1,4 @@
-package java_core.lesson_1.utils;
+package itacademy.java_core.lesson_1.utils;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,7 +1,7 @@
-package java_core.lesson_1;
+package itacademy.java_core.lesson_1;
 
 
-import java_core.lesson_1.api.IFileHandler;
+import itacademy.java_core.lesson_1.api.IFileHandler;
 
 import java.io.*;
 

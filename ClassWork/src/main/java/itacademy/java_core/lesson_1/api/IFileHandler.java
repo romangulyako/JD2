@@ -1,4 +1,4 @@
-package java_core.lesson_1.api;
+package itacademy.java_core.lesson_1.api;
 
 public interface IFileHandler {
     String read(String path);

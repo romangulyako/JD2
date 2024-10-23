@@ -1,4 +1,4 @@
-package java_core.lesson_1.utils;
+package itacademy.java_core.lesson_1.utils;
 
 public class TextUtils {
     public static String arrayToString(String[] array, String separator) {
