@@ -1,8 +1,8 @@
-package home_work_1.robots_builder.job;
+package itacademy.home_work_1.robots_builder.job;
 
-import home_work_1.robots_builder.Assistant;
-import home_work_1.robots_builder.RobotPartsFactory;
-import home_work_1.robots_builder.dto.RobotParts;
+import itacademy.home_work_1.robots_builder.Assistant;
+import itacademy.home_work_1.robots_builder.RobotPartsFactory;
+import itacademy.home_work_1.robots_builder.dto.RobotParts;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

@@ -1,6 +1,6 @@
-package home_work_1.robots_builder.job;
+package itacademy.home_work_1.robots_builder.job;
 
-import home_work_1.robots_builder.RobotPartsFactory;
+import itacademy.home_work_1.robots_builder.RobotPartsFactory;
 
 import java.util.concurrent.TimeUnit;
 

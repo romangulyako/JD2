@@ -1,7 +1,7 @@
-package home_work_1.robots_builder;
+package itacademy.home_work_1.robots_builder;
 
-import home_work_1.robots_builder.job.AssistantJob;
-import home_work_1.robots_builder.job.RobotPartsFactoryJob;
+import itacademy.home_work_1.robots_builder.job.AssistantJob;
+import itacademy.home_work_1.robots_builder.job.RobotPartsFactoryJob;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package home_work_1.robots_builder;
+package itacademy.home_work_1.robots_builder;
 
-import home_work_1.robots_builder.dto.RobotParts;
+import itacademy.home_work_1.robots_builder.dto.RobotParts;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;

@@ -1,4 +1,4 @@
-ДЗ №1 (1 Практическая часть 17.10.2024)
+**ДЗ №1 (1 Практическая часть 17.10.2024)**
 * Задание про сборку роботов - HomeWork/src/main/java/itacademy/home_work_1/robots_builder/*
 
 * Задание 70 - HomeWork/src/main/java/itacademy/home_work_1/task_70/*

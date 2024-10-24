@@ -1,4 +1,4 @@
-package home_work_1.task_72;
+package itacademy.home_work_1.task_72;
 
 import java.lang.reflect.Method;
 

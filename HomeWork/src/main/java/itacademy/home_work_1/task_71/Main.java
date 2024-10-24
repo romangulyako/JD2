@@ -1,4 +1,4 @@
-package home_work_1.task_71;
+package itacademy.home_work_1.task_71;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

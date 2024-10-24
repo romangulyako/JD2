@@ -1,4 +1,4 @@
-package home_work_1.robots_builder.dto;
+package itacademy.home_work_1.robots_builder.dto;
 
 public enum RobotParts {
     HEAD,

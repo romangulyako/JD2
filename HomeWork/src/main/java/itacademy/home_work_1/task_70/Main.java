@@ -1,4 +1,4 @@
-package home_work_1.task_70;
+package itacademy.home_work_1.task_70;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

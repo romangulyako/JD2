@@ -1,4 +1,4 @@
-package home_work_1.task_70;
+package itacademy.home_work_1.task_70;
 
 public class Man {
     private String name;
